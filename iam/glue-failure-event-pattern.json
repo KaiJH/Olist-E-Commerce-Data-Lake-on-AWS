@@ -1,0 +1,8 @@
+{
+    "source": ["aws.glue"],
+    "detail-type": ["Glue Job State Change"],
+    "detail": {
+        "jobName": ["olist_raw_to_curated", "olist_curated_to_mart"],
+        "state": ["FAILED", "TIMEOUT"]
+    }
+}

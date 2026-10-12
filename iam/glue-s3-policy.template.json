@@ -1,0 +1,42 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "ListLakeBucket",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetBucketLocation"
+            ],
+            "Resource": "arn:aws:s3:::__BUCKET__"
+        },
+        {
+            "Sid": "ReadOnlyRawZoneAndScripts",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::__BUCKET__/raw/*",
+                "arn:aws:s3:::__BUCKET__/manifests/*",
+                "arn:aws:s3:::__BUCKET__/scripts/*"
+            ]
+        },
+        {
+            "Sid": "ReadWriteProcessedZones",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::__BUCKET__/curated/*",
+                "arn:aws:s3:::__BUCKET__/quarantine/*",
+                "arn:aws:s3:::__BUCKET__/mart/*",
+                "arn:aws:s3:::__BUCKET__/logs/*",
+                "arn:aws:s3:::__BUCKET__/temp/*"
+            ]
+        }
+    ]
+}

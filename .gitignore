@@ -1,0 +1,19 @@
+# local data and generated files (never commit the Olist CSVs)
+staging/
+output/
+dataset/
+local_lake/
+lake_*/
+build/
+spark-warehouse/
+metastore_db/
+derby.log
+# local settings (account id, paths)
+env.sh
+# python
+__pycache__/
+.pytest_cache/
+*.pyc
+.DS_Store
+.vscode
+/test*.py

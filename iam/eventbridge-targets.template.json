@@ -1,0 +1,15 @@
+[
+    {
+        "Id": "olist-alert-sns",
+        "Arn": "__TOPIC_ARN__",
+        "InputTransformer": {
+            "InputPathsMap": {
+                "job": "$.detail.jobName",
+                "state": "$.detail.state",
+                "run": "$.detail.jobRunId",
+                "msg": "$.detail.message"
+            },
+            "InputTemplate": "\"[olist-glue-lake] Glue job <job> ended in state <state>. Run: <run>. Message: <msg>\""
+        }
+    }
+]

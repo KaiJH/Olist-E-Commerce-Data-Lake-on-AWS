@@ -1,0 +1,5 @@
+# For people who clone this repo. Versions this project was tested with:
+#   Python 3.12, pyspark 4.1.2 (local) / AWS Glue 5.0 = Spark 3.5 (cloud), pytest 9.1, boto3 1.43
+pyspark>=3.5,<5
+pytest>=8
+boto3>=1.34
